@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HGV ONE LOGISTICS LTD — Reliable Haulage & Logistics Across the UK</title>
+<meta name="description" content="HGV ONE LOGISTICS LTD provides professional haulage and logistics services across the United Kingdom. Reliable, on-time delivery for businesses of all sizes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0B1D3A;
+    --navy-light: #132B52;
+    --blue: #1B6FE3;
+    --blue-light: #3B8AF5;
+    --orange: #E8742A;
+    --orange-light: #F5923E;
+    --white: #FFFFFF;
+    --gray-50: #F7F8FA;
+    --gray-100: #E8EBF0;
+    --gray-200: #C9CED8;
+    --gray-600: #5A6477;
+    --gray-800: #2D3648;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--gray-800);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(11, 29, 58, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800; font-size: 1.35rem;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--orange); }
+  nav ul {
+    display: flex; gap: 2rem; list-style: none;
+  }
+  nav ul a {
+    color: var(--gray-200); text-decoration: none; font-size: 0.9rem;
+    font-weight: 500; transition: color 0.2s;
+  }
+  nav ul a:hover { color: var(--orange-light); }
+  .nav-cta {
+    background: var(--orange); color: var(--white) !important;
+    padding: 0.55rem 1.3rem; border-radius: 6px;
+    font-weight: 600 !important;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--orange-light); }
+
+  /* HERO */
+  .hero {
+    margin-top: 72px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #1A3A6B 100%);
+    padding: 6rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -50%; right: -20%; width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(27, 111, 227, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -30%; left: -10%; width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(232, 116, 42, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-inner {
+    max-width: 900px; margin: 0 auto; position: relative; z-index: 2;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(232, 116, 42, 0.15);
+    color: var(--orange-light);
+    font-size: 0.8rem; font-weight: 600;
+    padding: 0.4rem 1rem; border-radius: 20px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800; color: var(--white);
+    line-height: 1.15; margin-bottom: 1.2rem;
+    letter-spacing: -0.03em;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 1.15rem; color: var(--gray-200);
+    max-width: 600px; margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.85rem 1.8rem; border-radius: 8px;
+    font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.25s;
+  }
+  .btn-primary {
+    background: var(--orange); color: var(--white);
+    box-shadow: 0 4px 16px rgba(232, 116, 42, 0.3);
+  }
+  .btn-primary:hover {
+    background: var(--orange-light);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(232, 116, 42, 0.4);
+  }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+  .btn-outline:hover {
+    border-color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* STATS BAR */
+  .stats {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-100);
+    padding: 2.5rem 2rem;
+  }
+  .stats-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;
+    text-align: center;
+  }
+  .stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem; font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.03em;
+  }
+  .stat-label {
+    font-size: 0.85rem; color: var(--gray-600);
+    margin-top: 0.25rem; font-weight: 500;
+  }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--blue); margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800; color: var(--navy);
+    letter-spacing: -0.02em; margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .section-desc {
+    font-size: 1.05rem; color: var(--gray-600);
+    max-width: 600px; line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  /* SERVICES */
+  .services-section { background: var(--gray-50); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s;
+  }
+  .service-card:hover {
+    border-color: var(--blue-light);
+    box-shadow: 0 8px 30px rgba(27, 111, 227, 0.08);
+    transform: translateY(-2px);
+  }
+  .service-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+  }
+  .service-card h3 {
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.5rem;
+  }
+  .service-card p {
+    font-size: 0.9rem; color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* WHY US */
+  .why-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .why-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.2rem 1.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    border-left: 3px solid var(--orange);
+  }
+  .why-item strong {
+    display: block; color: var(--navy);
+    font-size: 0.95rem; margin-bottom: 0.2rem;
+  }
+  .why-item p {
+    font-size: 0.88rem; color: var(--gray-600);
+    line-height: 1.5; margin: 0;
+  }
+
+  /* COVERAGE */
+  .coverage-section { background: var(--navy); color: var(--white); }
+  .coverage-section .section-label { color: var(--orange-light); }
+  .coverage-section .section-title { color: var(--white); }
+  .coverage-section .section-desc { color: var(--gray-200); }
+  .coverage-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .coverage-tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.5rem 1.1rem; border-radius: 6px;
+    font-size: 0.85rem; color: var(--gray-200);
+    font-weight: 500;
+  }
+
+  /* CONTACT */
+  .contact-section { background: var(--gray-50); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 10px;
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+  }
+  .contact-card .icon {
+    font-size: 1.6rem; margin-bottom: 0.8rem;
+  }
+  .contact-card h3 {
+    font-size: 0.95rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.4rem;
+  }
+  .contact-card p, .contact-card a {
+    font-size: 0.9rem; color: var(--gray-600);
+    text-decoration: none;
+  }
+  .contact-card a:hover { color: var(--blue); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  footer p {
+    font-size: 0.8rem; color: var(--gray-600);
+  }
+  footer .logo { font-size: 1.1rem; margin-bottom: 0.6rem; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero { padding: 4rem 1.5rem 3.5rem; }
+    section { padding: 3.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">HGV<span>ONE</span> LOGISTICS</div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">UK Nationwide Haulage</div>
+    <h1>Dependable logistics<br>for <em>every mile</em></h1>
+    <p>HGV ONE LOGISTICS LTD delivers professional road haulage and freight services across the United Kingdom. On time, every time — from single pallets to full loads.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Request a Quote</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-number">UK‑Wide</div>
+      <div class="stat-label">Nationwide Coverage</div>
+    </div>
+    <div>
+      <div class="stat-number">24/7</div>
+      <div class="stat-label">Operations Support</div>
+    </div>
+    <div>
+      <div class="stat-number">99%+</div>
+      <div class="stat-label">On‑Time Delivery Rate</div>
+    </div>
+    <div>
+      <div class="stat-number">Flexible</div>
+      <div class="stat-label">From Pallets to Full Loads</div>
+    </div>
+  </div>
+</div>
+
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Comprehensive Logistics Services</h2>
+    <p class="section-desc">From local distribution to long-haul freight, we provide end-to-end haulage solutions tailored to your business requirements.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚛</div>
+        <h3>Full &amp; Part Loads</h3>
+        <p>Efficient FTL and LTL transport for goods of all sizes. Consolidation services to optimise cost and delivery schedules.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Pallet Distribution</h3>
+        <p>Next-day and economy pallet delivery through our nationwide network. Real-time tracking on every consignment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔄</div>
+        <h3>Contract Logistics</h3>
+        <p>Dedicated transport solutions for ongoing supply chain requirements. Regular scheduled routes and flexible capacity.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Express &amp; Same‑Day</h3>
+        <p>Urgent deliveries when time is critical. Direct point-to-point service with priority handling and live updates.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Construction &amp; Industrial</h3>
+        <p>Heavy and oversized load transport for construction sites and industrial operations. HIAB and crane-assisted delivery available.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Fleet Management</h3>
+        <p>Modern, well-maintained fleet with GPS tracking. Fully compliant with UK transport regulations and DVSA standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="section-inner">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">Built for reliability</h2>
+    <p class="section-desc">We understand that your supply chain depends on consistent, professional logistics. Here's what sets us apart.</p>
+    <div class="why-list">
+      <div class="why-item">
+        <div>
+          <strong>Licensed &amp; Fully Insured</strong>
+          <p>Operator's licence holder with comprehensive goods-in-transit and public liability insurance for complete peace of mind.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div>
+          <strong>Technology-Driven Operations</strong>
+          <p>Real-time vehicle tracking, electronic proof of delivery, and automated status updates keep you informed at every stage.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div>
+          <strong>Experienced Team</strong>
+          <p>Professional, CPC-qualified drivers with extensive knowledge of UK road networks and delivery requirements.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div>
+          <strong>Scalable Capacity</strong>
+          <p>Whether you need a single van or a fleet of artics, we scale to meet demand — no job too small, no load too large.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coverage-section" id="coverage">
+  <div class="section-inner">
+    <div class="section-label">Our Network</div>
+    <h2 class="section-title">UK‑wide coverage</h2>
+    <p class="section-desc">Based in London with operational reach across all major UK regions and distribution hubs.</p>
+    <div class="coverage-tags">
+      <span class="coverage-tag">London &amp; South East</span>
+      <span class="coverage-tag">Midlands</span>
+      <span class="coverage-tag">North West</span>
+      <span class="coverage-tag">North East</span>
+      <span class="coverage-tag">Yorkshire</span>
+      <span class="coverage-tag">East Anglia</span>
+      <span class="coverage-tag">South West</span>
+      <span class="coverage-tag">Wales</span>
+      <span class="coverage-tag">Scotland</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Ready to move your freight?</h2>
+    <p class="section-desc">Contact us for a competitive quote or to discuss your logistics requirements.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <h3>Email</h3>
+        <a href="mailto:alin@hgvonelogistics.co.uk">alin@hgvonelogistics.co.uk</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>Phone</h3>
+        <a href="tel:+4407399515676">07399 515 676</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>Office</h3>
+        <p>London, United Kingdom</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">HGV<span>ONE</span> LOGISTICS</div>
+  <p>&copy; 2026 HGV ONE LOGISTICS LTD. All rights reserved. Company registered in England &amp; Wales.</p>
+</footer>
+
+</body>
+</html>
